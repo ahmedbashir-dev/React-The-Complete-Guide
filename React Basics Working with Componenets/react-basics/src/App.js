@@ -34,6 +34,8 @@ const App = ()=> {
 			return [expense, ...prevExpenses];
 		})
 	}
+
+
 	return (
 		<div>
 			
