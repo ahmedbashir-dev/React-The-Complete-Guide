@@ -3,7 +3,7 @@ import ExpensesFilter from "./components/Expenses/ExpensesFilter";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 const App = ()=> {
-	const expenses = [
+	const [expenses, setExpenses] = useState([
 		{
 			id: 1,
 			title: "Car Insurance",
@@ -28,10 +28,12 @@ const App = ()=> {
 			amount: 120.55,
 			date: new Date(2022, 0, 8),
 		},
-	];
+	]);
 
 	const addExpenseHandler = (expense)=>{
-		console.log(expense);
+		setExpenses((prevExpenses)=>{
+			return [expense, ...prevExpenses];
+		})
 	}
 	return (
 		<div>
