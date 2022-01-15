@@ -19,6 +19,8 @@ const Expenses = (props) => {
 				{items.map((item, index) => {
 					return (
 						<ExpenseItem
+						
+							key={item.id}
 							title={item.title}
 							amount={item.amount}
 							date={item.date}

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ExpensesFilter from "./components/Expenses/ExpensesFilter";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 const App = ()=> {
